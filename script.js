@@ -1,4 +1,4 @@
-$('.square').click(function() {
+$('.square').one("click",function() {
   var thisSquare = $(this);
   $.ajax( {
     url: 'https://www.boolean.careers/api/random/int',
@@ -10,12 +10,12 @@ $('.square').click(function() {
       $(thisSquare).removeClass('green');
 
       if (randomNumber <= 5) {
-        $(thisSquare).addClass('yellow');
-        $(thisSquare).text(randomNumber).html;
+        (thisSquare).addClass('yellow');
+        (thisSquare).text(randomNumber).html;
       }
       else {
-        $(thisSquare).addClass('green');
-        $(thisSquare).text(randomNumber).html;
+        (thisSquare).addClass('green');
+        (thisSquare).text(randomNumber).html;
       }
     },
     error: function(){
